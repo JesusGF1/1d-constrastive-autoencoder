@@ -6,16 +6,13 @@ wandb/*
 __pycache__/*
 *.pkl
 .DS_Store
-*.pt
-**/*.pt
 **/*.ckpt
 *.npy
 **/*.npy
 *.zip
 **/*.zip
-*.csv
-**/*.csv
 *.json
 **/*.json
 *.txt
 **/*.txt
+local_inventory.csv
