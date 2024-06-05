@@ -28,7 +28,8 @@ try:
     isi_dist = []
     bad_indices = []
     for idx, isi in enumerate(all_isi):
-        hist, _ = np.histogram(isi[isi < 100], bins=100, density=True) #This is in miliseconds# Tal had (bin widths were set to 1/15th of the median ISI for a given unit)
+        hist, _ = np.histogram(isi[isi < 100], bins=100) #This is in miliseconds# Tal had (bin widths were set to 1/15th of the median ISI for a given unit)
+        hist = hist/sum(hist)
         if not np.isnan(hist).all():
             isi_dist.append(hist)
         else:
